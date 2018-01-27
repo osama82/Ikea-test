@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<animals>
+<animal>
+<type>dog</type>
+<name>rack</name>
+<age>8</age>
+</animal>
+<animal>
+<type>cat</type>
+<name>lili</name>
+<age>12</age>
+</animal>
+</animals>
+
