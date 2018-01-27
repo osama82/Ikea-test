@@ -2,7 +2,6 @@ package animals.com;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.ArrayList;
 
 
 
@@ -10,10 +9,10 @@ import java.util.ArrayList;
 public class Animal {
     private String type;
     private String name;
-    private int birthYear;
-    private ArrayList<? extends Animal> animals;
+    private String birthYear;
+    //private ArrayList<? extends Animal> animals;
 
-    public Animal(String type, String name, int birthYear) {
+    public Animal(String type, String name, String birthYear) {
         this.type = type;
         this.name = name;
         this.birthYear = birthYear;
@@ -41,12 +40,18 @@ public class Animal {
     }
 
     @XmlElement
-    public int getBirthYear() {
+    public String getBirthYear() {
         return birthYear;
     }
 
-    public void setBirthYear(int birthYear) {
+    public void setBirthYear(String birthYear) {
         this.birthYear = birthYear;
     }
+
+    @Override
+    public String toString(){
+
+        return getType()+"  "+ getName()+"  "+ getBirthYear();
+}
 }
 

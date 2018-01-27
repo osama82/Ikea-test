@@ -1,3 +1,4 @@
 type,name,age
 dog,rack,8
 cat,lili,12
+horse,mad,23

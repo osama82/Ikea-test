@@ -2,7 +2,7 @@ package animals.com;
 
 public class Dog extends Animal implements Swimmer {
 
-    public Dog(String type, String name, int birthYear) {
+    public Dog(String type, String name, String birthYear) {
         super(type, name, birthYear);
     }
 

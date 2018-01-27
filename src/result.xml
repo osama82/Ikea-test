@@ -10,5 +10,10 @@
 <name>lili</name>
 <age>12</age>
 </animal>
+<animal>
+<type>horse</type>
+<name>mad</name>
+<age>23</age>
+</animal>
 </animals>
 
