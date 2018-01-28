@@ -1,4 +1,6 @@
 type,name,age
 dog,rack,8
-cat,lili,12
+Fish,lili,12
+fish,nora,1
+fish,linda,6
 horse,mad,23

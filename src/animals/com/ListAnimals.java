@@ -12,8 +12,8 @@ public class ListAnimals {
     public ListAnimals(List<Animal> animalslist) {
         this.animalslist = animalslist;
     }
+    public ListAnimals(){
 
-    public ListAnimals() {
     }
 
     @XmlElement(name="animal")

@@ -17,21 +17,25 @@ public class Main {
     public static void main(String[] args) {
         //XMLCreators creator = new XMLCreators();
         //creator.convertFile("src/start.txt","src/result.xml",",");
+        Swimmer fis =new Fish("fish","katy","12");
+
+
+
         File file =new File("src/result.xml");
         try {
             JAXBContext context =JAXBContext.newInstance(ListAnimals.class);
             Unmarshaller unmarshaller=context.createUnmarshaller();
             ListAnimals animals=(ListAnimals) unmarshaller.unmarshal(file);
             for (Animal p : animals.getAnimalslist()){
-
+                    if (p.getType().equalsIgnoreCase("fish")) annimalls.add((Fish) p);
                 System.out.println(p.toString());
-                annimalls.add(p);
+
             }
             Function<Animal,String> byType=Animal::getType;
             System.out.println("hello");
-           annimalls.stream().sorted(Comparator.comparing(Animal::getType)).forEach(System.out::println);
-           System.out.println("hello");
-           annimalls.stream().filter(e -> e.getType().equals("horse")).forEach(System.out::println);
+            annimalls.stream().sorted(Comparator.comparing(Animal::getType)).forEach(System.out::println);
+            System.out.println("hello");
+            annimalls.stream().filter(e -> e.getType().equals("horse")).forEach(System.out::println);
 
 
         } catch (JAXBException e) {
