@@ -39,7 +39,7 @@ public class Animal {
         this.name = name;
     }
 
-    @XmlElement
+    @XmlElement(name="age",required = true)
     public String getBirthYear() {
         return birthYear;
     }

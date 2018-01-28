@@ -27,7 +27,7 @@ public class Main {
             Unmarshaller unmarshaller=context.createUnmarshaller();
             ListAnimals animals=(ListAnimals) unmarshaller.unmarshal(file);
             for (Animal p : animals.getAnimalslist()){
-                    if (p.getType().equalsIgnoreCase("fish")) annimalls.add((Fish) p);
+                   // if (p.getType().equalsIgnoreCase("fish")) annimalls.add((Fish) p);
                 System.out.println(p.toString());
 
             }
