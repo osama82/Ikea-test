@@ -1,9 +1,13 @@
 package animals.com;
 
 public class Dog extends Animal implements Swimmer {
+    public Dog(){
+    this.setType("dog");
+    }
 
     public Dog(String type, String name, String birthYear) {
-        super(type, name, birthYear);
+
+        super( name, birthYear);
     }
 
     @Override

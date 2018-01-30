@@ -13,7 +13,7 @@ public class TestLoger {
     private static final Logger logger= LoggerFactory.getLogger(TestLoger.class);
     public static void main(String[] args) {
 
-        logger.debug("hello");
+        logger.error("hello");
 
 
     }

@@ -10,6 +10,7 @@ public class ListAnimals {
     private List<Animal> animalslist=new ArrayList<>();
 
     public ListAnimals(List<Animal> animalslist) {
+
         this.animalslist = animalslist;
     }
     public ListAnimals(){
@@ -18,6 +19,7 @@ public class ListAnimals {
 
     @XmlElement(name="animal")
     public List<Animal> getAnimalslist() {
+
         return animalslist;
     }
 

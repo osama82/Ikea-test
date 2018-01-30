@@ -13,25 +13,30 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.util.ArrayList;
 
-public class converter {
+/**
+ * convert from CSV file type  TO XML file type
+ */
+public class Converter {
     protected DocumentBuilderFactory domFactory = null;
     protected DocumentBuilder domBuilder = null;
 
-    public static void main(String[] args) {
+    public  void convertToXml(String csvFilePath, String xmlFilePath)  {
 
 
-        ArrayList<String> busStopInfo = new ArrayList<String>(7);
+        ArrayList<String> animalsInfo = new ArrayList<String>();
+        File file = new File(csvFilePath);
 
-        File file = new File("src/start.txt");
+        if(!(file.exists())){
+         System.err.println("nol file found");
+        return;
+        }
+
         BufferedReader readFile = null;
         try {
             DocumentBuilderFactory df = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = df.newDocumentBuilder();
-
             Document document = db.newDocument();
-
             Element rootElement = document.createElement("animals");
-
             document.appendChild(rootElement);
             readFile = new BufferedReader(new FileReader(file));
             int line = 0;
@@ -43,16 +48,16 @@ public class converter {
 
                 if (line == 0) {
                     for (String columnInfo : rowValues) {
-                        busStopInfo.add(columnInfo);
+                        animalsInfo.add(columnInfo);
                     }
                 } else {
                     Element childElement = document.createElement("animal");
                     rootElement.appendChild(childElement);
 
 
-                    for (int columnInfo = 0; columnInfo < busStopInfo.size(); columnInfo++) {
+                    for (int columnInfo = 0; columnInfo < animalsInfo.size(); columnInfo++) {
 
-                        String header = busStopInfo.get(columnInfo);
+                        String header = animalsInfo.get(columnInfo);
                         String value = null;
 
                         if (columnInfo < rowValues.length) {
@@ -74,11 +79,13 @@ public class converter {
             tf.setOutputProperty(OutputKeys.INDENT, "yes");
             Writer output = new StringWriter();
             tf.transform(new DOMSource(document), new StreamResult(output));
-            PrintWriter writer = new PrintWriter("src/result.xml", "UTF-8");
+            PrintWriter writer = new PrintWriter(xmlFilePath, "UTF-8");
             writer.println(output.toString());
             writer.close();
             //System.out.println(output.toString());
         } catch (Exception e) {
+            e.getStackTrace();
 
         }
-    }}
+    }
+}

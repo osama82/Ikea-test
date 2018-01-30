@@ -5,25 +5,5 @@
 <name>rack</name>
 <age>8</age>
 </animal>
-<animal>
-<type>Fish</type>
-<name>lili</name>
-<age>12</age>
-</animal>
-<animal>
-<type>fish</type>
-<name>nora</name>
-<age>1</age>
-</animal>
-<animal>
-<type>fish</type>
-<name>linda</name>
-<age>6</age>
-</animal>
-<animal>
-<type>horse</type>
-<name>mad</name>
-<age>23</age>
-</animal>
 </animals>
 

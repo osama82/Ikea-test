@@ -1,7 +1,9 @@
 package Tests;
 
+import org.junit.After;
+
 class TestLogerTest {
-    @org.junit.jupiter.api.Test
+    @After
     void main() {
     }
 

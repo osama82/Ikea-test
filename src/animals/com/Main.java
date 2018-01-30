@@ -10,11 +10,17 @@ import java.util.List;
 import java.util.function.Function;
 
 public class Main {
+    Converter convr;
+    Converter com =new Converter();
 
 
     public static List<Animal> annimalls=new ArrayList<>();
 
     public static void main(String[] args) {
+
+        //AnimalFactory.getAnimal("dog","lora","2009");
+        Converter conv =new Converter();
+        conv.convertToXml("src/start.txt","src/result.xml");
         //XMLCreators creator = new XMLCreators();
         //creator.convertFile("src/start.txt","src/result.xml",",");
         Swimmer fis =new Fish("fish","katy","12");

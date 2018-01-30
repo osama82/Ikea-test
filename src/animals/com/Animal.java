@@ -4,10 +4,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 
-
-@XmlRootElement(name="Animal")
-public class Animal {
-    private String type;
+@XmlRootElement(name = "Animal")
+public  class Animal {
+     String type;
     private String name;
     private String birthYear;
     //private ArrayList<? extends Animal> animals;
@@ -21,7 +20,12 @@ public class Animal {
     public Animal() {
     }
 
-    @XmlElement
+    public Animal(String name, String birthYear) {
+        this.name=name;
+        this.birthYear=birthYear;
+    }
+
+    @XmlElement(name = "type")
     public String getType() {
         return type;
     }
@@ -30,7 +34,7 @@ public class Animal {
         this.type = type;
     }
 
-    @XmlElement
+    @XmlElement(name = "name")
     public String getName() {
         return name;
     }
