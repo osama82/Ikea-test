@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <animals>
 <animal>
-<type>dog</type>
-<name>rack</name>
-<age>8</age>
+<type>dolphin</type>
+<name>roody</name>
+<age>23</age>
+</animal>
+<animal>
+<type>parakeet</type>
+<name>tamer</name>
+<age>21</age>
+</animal>
+<animal>
+<type>dolphin</type>
+<name>huy</name>
+<age>54</age>
+</animal>
+<animal>
+<type>dolphin</type>
+<name>gty</name>
+<age>6</age>
 </animal>
 </animals>
 

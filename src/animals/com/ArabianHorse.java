@@ -1,13 +1,18 @@
 package animals.com;
 
+/**
+ * @author osama
+ * @Project Ikea test
+ */
 public class ArabianHorse extends Animal implements Swimmer {
 
     public ArabianHorse(){
-
+    this.setType("ArabianHorse");
     }
 
-    public ArabianHorse(String type, String name, String birthYear) {
-        super(type, name, birthYear);
+    public ArabianHorse( String name, String yearBirth) {
+        super( name, yearBirth);
+        super.setType("ArabianHorse");
     }
 
     @Override

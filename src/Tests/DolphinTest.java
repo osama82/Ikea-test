@@ -2,7 +2,7 @@ package Tests;
 
 import animals.com.Dolphin;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.*;
 
 class DolphinTest {
 
@@ -15,6 +15,7 @@ class DolphinTest {
     @Test
     void tester() {
         assert(equals(dol));
+
     }
 
 }

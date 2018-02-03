@@ -10,14 +10,13 @@ public class ListAnimals {
     private List<Animal> animalslist=new ArrayList<>();
 
     public ListAnimals(List<Animal> animalslist) {
-
         this.animalslist = animalslist;
     }
     public ListAnimals(){
 
     }
 
-    @XmlElement(name="animal")
+    @XmlElement(name="animal",required = true)
     public List<Animal> getAnimalslist() {
 
         return animalslist;

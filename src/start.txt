@@ -1,4 +1,5 @@
 type,name,age
 dolphin,roody,23
 parakeet,tamer,21
-dolphin,huy,t54
+dolphin,huy,54
+dolphin,gty,6

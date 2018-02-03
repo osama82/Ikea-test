@@ -6,8 +6,8 @@ public class Fish extends Animal implements  Swimmer{
     this.setType("fish");
     }
 
-    public Fish(String type, String name, String birthYear) {
-        super(type, name, birthYear);
+    public Fish( String name, String birthYear) {
+        super( name, birthYear);
     }
 
     @Override
