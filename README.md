@@ -1,5 +1,5 @@
 # Ikea-test
-project as test for senior java developer
+
 Software Development Academy: Java Programming Assessment
 Remarks
 Implement as much of the specified functionality as you can. We will assess all submitted solutions, regardless of their level of completion. Submitting a partial solution is better than not submitting anything!
