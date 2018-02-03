@@ -22,8 +22,8 @@ class AnimalFactoryTest {
     }
 
     @Test
-    void getAnimal8() throws IllegalArgumentException {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+    void getAnimal8Test() throws InvalidAnimalException {
+        Assertions.assertThrows(InvalidAnimalException.class, () -> {
             AnimalFactory.getAnimal8("run");
         });
 

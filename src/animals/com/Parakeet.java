@@ -11,6 +11,7 @@ public class Parakeet extends Animal {
 
     public Parakeet( String name, String birthYear) {
         super( name, birthYear);
+        this.setType("Parakeet");
 
 
     }

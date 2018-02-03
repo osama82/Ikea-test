@@ -5,10 +5,13 @@ package animals.com;
  * @Project Ikea test
  */
 public class BengalCat extends Animal {
-    public BengalCat(){
+    public BengalCat() {
+
         this.setType("BengalCat");
     }
-    public BengalCat(String type, String name, String yearBirth){
-        super(name,yearBirth);
+
+    public BengalCat(String name, String yearBirth) {
+        super(name, yearBirth);
+        this.setType("BengalCat");
     }
 }

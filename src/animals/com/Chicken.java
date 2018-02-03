@@ -12,6 +12,7 @@ public class Chicken extends Animal  {
 
         public Chicken( String name, String birthYear) {
             super( name, birthYear);
+            this.setType("Chicken");
 
         }
 

@@ -3,9 +3,7 @@ package animals.com;
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author osama
@@ -34,30 +32,33 @@ public class Main {
         //read from CSV file
         CSVReader csvReader = new CSVReader();
         List<Animal> animalList = csvReader.convertCsvFile("src/start.csv");
+        Service service=new Service();
+
 
         System.out.println("----------------------------");
-        printSortedByName(animalList);
+        service.printSortedByName(animalList);
 
         System.out.println("----------------------------");
-        List<Animal> ducks = allDucks(animalList);
+        List<Animal> ducks = service.allDucks(animalList);
         logger.info("geting all the ducks from the animals list");
         for (Animal p : ducks) {
             System.out.println(p.toString());
         }
         System.out.println("----------------------------");
-        System.out.println("the sum of the yearbirth " + sumYearsOfBirth(animalList));
+        System.out.println("the sum of the yearbirth " + service.sumYearsOfBirth(animalList));
         logger.info("printing the sum of all yearbirths numbers of all the animals");
 
         System.out.println("----------------------------");
 
-        List<Animal> swimmers = getSwimmers(animalList);
+        //get the animal Collection that represent swimmers animals
+        List<Animal> swimmers = service.getSwimmers(animalList);
         for (Animal p : swimmers)
             System.out.println(p.toString());
         ;
         logger.debug("get all the swimmers animals from the whole list into Collection");
 
         System.out.println("----------------------------");
-        List<Animal> sortedListOfSwimmers = sortByBirth(swimmers);
+        List<Animal> sortedListOfSwimmers = service.sortByBirth(swimmers);
         for (Animal p : sortedListOfSwimmers)
             System.out.println(p.toString());
 
@@ -68,7 +69,7 @@ public class Main {
 
     }
 
-    // print the animals list ordered by name
+    /*// print the animals list ordered by name
     private static void printSortedByName(List<Animal> animals) {
         animals.stream().sorted(Comparator.comparing(Animal::getName))
                 .forEach(System.out::println);
@@ -109,5 +110,5 @@ public class Main {
         return lis.stream().sorted(Comparator.comparing(Animal::birth).reversed())
                 .collect(Collectors.toList());
 
-    }
+    }*/
 }

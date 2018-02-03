@@ -5,12 +5,15 @@ package animals.com;
  * @Project Ikea test
  */
 public class GermanShepherd extends Animal implements Swimmer {
-    public GermanShepherd(){
+    public GermanShepherd() {
         this.setType("GermanShephered");
     }
-    public GermanShepherd(String type, String name, String yearBirth ){
-        super(type, name, yearBirth);
+
+    public GermanShepherd(String name, String yearBirth) {
+        super(name, yearBirth);
+        this.setType("GermanShepherd");
     }
+
     @Override
     public void swim() {
         System.out.println("german shepherd can swim");

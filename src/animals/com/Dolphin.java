@@ -8,6 +8,7 @@ public class Dolphin extends Animal implements Swimmer {
 
     public Dolphin( String name, String birthYear) {
         super( name, birthYear);
+        this.setType("Dolphin");
 
     }
 

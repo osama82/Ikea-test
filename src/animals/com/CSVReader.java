@@ -68,8 +68,14 @@ public class CSVReader {
 
         // using regular expression to eliminate the values which are not numeric
         if (!p[2].matches("[0-9]+")) {
+            try {
+                throw new InvaliEntryExeption("not valid year Birth");
+            } catch (InvaliEntryExeption e) {
+               // e.printStackTrace();
+                logger.warn("Invalid Entry",e);
+            }
             i++;
-            logger.warn("Invalid Entry");
+
             //logger.log(Level.toLevel("Sever"),"",new Exception("hii"));
             System.err.println(i + " invalid entry");
             return null;

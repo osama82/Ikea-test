@@ -38,7 +38,7 @@ public class AnimalFactory {
         else if (type.trim().equalsIgnoreCase("GreatWhiteShark"))
             return new GreatWhiteShark();
 
-        throw new IllegalArgumentException("invalid argument");
+        return null;
     }
 
     // mapping every @type to correct object (Animal)
@@ -56,13 +56,13 @@ public class AnimalFactory {
      * @return Animal
      * @throws Exception when the type is not recognized
      */
-    public static Animal getAnimal8(String type) {
+    public static Animal getAnimal8(String type) throws InvalidAnimalException {
         Supplier<Animal> animal = map.get(type.toUpperCase().trim());
         if (animal != null)
             return animal.get();
 
         logger.error("the error is", new IllegalArgumentException("No such animal " + type.toUpperCase()));
-        throw new IllegalArgumentException("invalid argument");
+        throw new InvalidAnimalException("invalid Animal , not supported");
     }
 
 }
