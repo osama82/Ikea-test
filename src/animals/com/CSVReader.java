@@ -12,7 +12,6 @@ import java.util.stream.Collectors;
  * @author osama
  * @Project Ikea test
  * class responsible of reading the CSV file into collection of animals
- *
  */
 
 public class CSVReader {
@@ -20,7 +19,7 @@ public class CSVReader {
     //static Animal item;
     static int counter;
 
-    public static final Logger logger=Logger.getLogger(CSVReader.class);
+    public static final Logger logger = Logger.getLogger(CSVReader.class);
 
 /*
     public static void main(String[] args)  {
@@ -39,31 +38,31 @@ public class CSVReader {
     }*/
 
 
-    public  List<Animal> convertCsvFile(String csvFile)  {
+    public List<Animal> convertCsvFile(String csvFile) {
 
         List<Animal> inputList = new ArrayList<>();
 
-        try{
+        try {
             File inputF = new File(csvFile);
             InputStream inputFS = new FileInputStream(csvFile);
             BufferedReader br = new BufferedReader(new InputStreamReader(inputFS));
             inputList = br.lines().skip(1).// retrieve the lines and skip the first line that holds description
-                        map(retriveAnimal).// get the animal object that goes with the type
-                        filter(entry->entry!=null).// eliminate the NULL Entries caused by wrong input
-                        collect(Collectors.toList());// collect to whole objects into List
+                    map(retriveAnimal).// get the animal object that goes with the type
+                    filter(entry -> entry != null).// eliminate the NULL Entries caused by wrong input
+                    collect(Collectors.toList());// collect to whole objects into List
             br.close();
 
-        } catch ( IOException e) {
+        } catch (IOException e) {
         }
-        for(Animal t:inputList){
+        for (Animal t : inputList) {
             System.out.println(t);
         }
-        return inputList ;
+        return inputList;
     }
 
     private static int i;
 
-    private    Function<String, Animal> retriveAnimal = (String line) -> {
+    private Function<String, Animal> retriveAnimal = (String line) -> {
 
         String[] p = line.split(",");// a CSV has comma separate between values
 
@@ -72,21 +71,20 @@ public class CSVReader {
             i++;
             logger.warn("Invalid Entry");
             //logger.log(Level.toLevel("Sever"),"",new Exception("hii"));
-            System.err.println(i+" invalid entry");
+            System.err.println(i + " invalid entry");
             return null;
-        }
-        else {
+        } else {
 
 
             Animal item = AnimalFactory.getAnimal(p[0]);
-           // if(item instanceof Swimmer)
-               //  ((Swimmer) item).swim();
-                //System.out.println(((Swimmer) item).swim());
+            // if(item instanceof Swimmer)
+            //  ((Swimmer) item).swim();
+            //System.out.println(((Swimmer) item).swim());
             //item.setType(p[0]);//<-- this is the first column in the csv file
             item.setName(p[1]);
             item.setBirthYear(p[2]);
 
-        return item;
+            return item;
 
         }
     };

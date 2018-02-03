@@ -7,6 +7,7 @@ package animals.com;
 public class Duck extends Animal implements Swimmer{
 
     public Duck(){
+
         this.setType("Duck");
     }
     public Duck(String name,String yearbirth){

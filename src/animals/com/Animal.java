@@ -2,8 +2,10 @@ package animals.com;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  * /**
+ *
  * @author osama
  * @Project Ikea test
  * class Animal represents the Animal
@@ -13,12 +15,11 @@ import javax.xml.bind.annotation.XmlRootElement;
  * birthYear: the year of birth
  * every Animal is an Element in the representing XML file
  * which has three child elements @type @name @yearBirth
- *
-*/
+ */
 
 
 @XmlRootElement(name = "animal") // the root Element of the representing XML file
-public  class Animal {
+public class Animal {
 
     private String type;
     private String name;
@@ -33,52 +34,53 @@ public  class Animal {
 
     public Animal() {
     }
+
     public Animal(String name, String birthYear) {
-        this.name=name;
-        this.birthYear=birthYear;
+        this.name = name;
+        this.birthYear = birthYear;
     }
 
     // child Element of every Animal ,element @type
-    @XmlElement(name = "type",required = true)
-     String getType() {
+    @XmlElement(name = "type", required = true)
+    String getType() {
         return type;
     }
 
-     void setType(String type) {
+    void setType(String type) {
         this.type = type;
     }
 
 
     // child Element of every Animal ,element @Name
-    @XmlElement(name = "name",required = true)
-     String getName() {
+    @XmlElement(name = "name", required = true)
+    String getName() {
         return name;
     }
 
-     void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
     // child Element of every Animal, element @BirthYear
 
 
-    int birth(){
+    int birth() {
         return Integer.valueOf(birthYear);
     }
 
-    @XmlElement(name="age",required = true)
-      String getBirthYear() {
+    @XmlElement(name = "age", required = true)
+    String getBirthYear() {
         return birthYear;
     }
 
-      void setBirthYear(String birthYear) {
+    void setBirthYear(String birthYear) {
         this.birthYear = birthYear;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
 
-        return getType()+","+ getName()+","+ getBirthYear();
+        return getType() + "," + getName() + "," + getBirthYear();
     }
 }
 

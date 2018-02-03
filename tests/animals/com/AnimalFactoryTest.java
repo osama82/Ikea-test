@@ -1,18 +1,33 @@
 package animals.com;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.jupiter.api.*;
+
 
 /**
- *
  * @author osama
  * @Project Ikea test
- * @date 2/1/2018
+ * testing the AnimalFactory class
  */
 class AnimalFactoryTest {
+
+
     @Test
-    void getAnimal() {
-        AnimalFactory.getAnimal("dog");
+    void getAnimalTest() {
+        Animal duck = AnimalFactory.getAnimal("duck");
+        Assertions.assertTrue(duck instanceof Duck);
+        Assertions.assertFalse(duck instanceof Dolphin);
+        Assertions.assertEquals(null, AnimalFactory.getAnimal("tore"));
+        Assertions.assertEquals("Duck".toUpperCase(), duck.getType().toUpperCase());
+    }
+
+    @Test
+    void getAnimal8() throws IllegalArgumentException {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            AnimalFactory.getAnimal8("run");
+        });
 
     }
+
 
 }
