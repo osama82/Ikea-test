@@ -48,13 +48,14 @@ public class CSVReader {
 
     private Function<String, Animal> retriveAnimal = (String line) -> {
 
+        line=line.replaceAll("\\s","");//remove white spaces between words
         String[] p = line.split(",");// a CSV has comma separate between values
 
         // using regular expression to eliminate the values which are not numeric
         if (!p[2].matches("[0-9]+")) {
             try {
-                throw new InvaliEntryExeption("not valid year Birth");
-            } catch (InvaliEntryExeption e) {
+                throw new InvaliEntryException("not valid year Birth");
+            } catch (InvaliEntryException e) {
                 // e.printStackTrace();
                 logger.warn("Invalid Entry", e);
             }
@@ -69,6 +70,7 @@ public class CSVReader {
             Animal item = AnimalFactory.getAnimal(p[0]);
             item.setName(p[1]);
             item.setBirthYear(p[2]);
+
 
             return item;
 
