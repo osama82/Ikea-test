@@ -10,6 +10,8 @@ import java.util.stream.Collectors;
 /**
  * @author osama
  * @Project Ikea test
+ * Class that deliver services to manipulate the lists of
+ * Animals and Swimmers @param List<Animal>
  */
 public class Service {
 

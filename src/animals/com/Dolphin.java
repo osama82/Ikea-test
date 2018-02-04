@@ -6,9 +6,9 @@ public class Dolphin extends Animal implements Swimmer {
         this.setType("Dolphin");
     }
 
-    public Dolphin( String name, String birthYear) {
-        super( name, birthYear);
-        this.setType("Dolphin");
+    public Dolphin( String name, String yearBirth) {
+        super( name, yearBirth);
+        this.setType("dolphin");
 
     }
 

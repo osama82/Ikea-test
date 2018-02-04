@@ -20,23 +20,7 @@ public class CSVReader {
     static int counter;
 
     public static final Logger logger = Logger.getLogger(CSVReader.class);
-
-/*
-    public static void main(String[] args)  {
-
-
-
-
-
-        //try {
-           List<Animal> dol=convertCsvFile("src/start.txt");
-
-       // } catch (IOException e) {
-           // logger.error("file error",e);
-         //   e.printStackTrace();
-        //}
-    }*/
-
+    
 
     public List<Animal> convertCsvFile(String csvFile) {
 
@@ -71,8 +55,8 @@ public class CSVReader {
             try {
                 throw new InvaliEntryExeption("not valid year Birth");
             } catch (InvaliEntryExeption e) {
-               // e.printStackTrace();
-                logger.warn("Invalid Entry",e);
+                // e.printStackTrace();
+                logger.warn("Invalid Entry", e);
             }
             i++;
 

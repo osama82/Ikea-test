@@ -16,6 +16,8 @@ public class Main {
     public static List<Animal> annimalls = new ArrayList<>();
     private static String csvfile = "src/start.txt";// path to the csv file
     private static String xmlfile = "src/result.xml";// path to the xml file
+    private static String swimmersCSVFile="swimmers.csv";
+     CSVRwiter csvRwiter;
 
     public static void main(String[] args) {
 
@@ -61,6 +63,11 @@ public class Main {
         List<Animal> sortedListOfSwimmers = service.sortByBirth(swimmers);
         for (Animal p : sortedListOfSwimmers)
             System.out.println(p.toString());
+
+        System.out.println("----------------------------");
+        CSVRwiter csvRwiter=new CSVRwiter();
+        csvRwiter.writeCSCVFile(sortedListOfSwimmers,swimmersCSVFile);
+
 
         System.out.println("----------------------------");
         ServerClient serverClient = new ServerClient();

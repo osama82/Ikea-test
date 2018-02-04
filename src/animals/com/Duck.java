@@ -11,9 +11,9 @@ public class Duck extends Animal implements Swimmer {
         this.setType("Duck");
     }
 
-    public Duck(String name, String yearbirth) {
-        super(name, yearbirth);
-        super.setType("duck");
+    public Duck(String name, String yearBirth) {
+        super(name, yearBirth);
+        super.setType("Duck");
     }
 
 
