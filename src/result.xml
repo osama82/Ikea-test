@@ -1,24 +1,38 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <animals>
-<animal>
-<type>dolphin</type>
-<name>roody</name>
-<age>23</age>
-</animal>
-<animal>
-<type>parakeet</type>
-<name>tamer</name>
-<age>21</age>
-</animal>
-<animal>
-<type>dolphin</type>
-<name>huy</name>
-<age>54</age>
-</animal>
-<animal>
-<type>dolphin</type>
-<name>gty</name>
-<age>6</age>
-</animal>
+    <animal>
+        <birth>2011</birth>
+        <name>lucy</name>
+        <type>GoldenRetriever</type>
+    </animal>
+    <animal>
+        <birth>2003</birth>
+        <name>winter</name>
+        <type>Dolphin</type>
+    </animal>
+    <animal>
+        <birth>2010</birth>
+        <name>donald</name>
+        <type>Duck</type>
+    </animal>
+    <animal>
+        <birth>2015</birth>
+        <name>johnny</name>
+        <type>Chicken</type>
+    </animal>
+    <animal>
+        <birth>2009</birth>
+        <name>blueskin</name>
+        <type>ArabianHorse</type>
+    </animal>
+    <animal>
+        <birth>2005</birth>
+        <name>jaws</name>
+        <type>GreatWhiteShark</type>
+    </animal>
+    <animal>
+        <birth>2010</birth>
+        <name>cleo</name>
+        <type>parakeet</type>
+    </animal>
 </animals>
-

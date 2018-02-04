@@ -19,7 +19,7 @@ public class CSVReader {
     //static Animal item;
     static int counter;
 
-    public static final Logger logger = Logger.getLogger(CSVReader.class);
+    public static final Logger logger = Logger.getLogger("Invalid");
 
 
     public List<Animal> convertCsvFile(String csvFile) {
@@ -54,15 +54,15 @@ public class CSVReader {
         // using regular expression to eliminate the values which are not numeric
         if (!p[2].matches("[0-9]+")) {
             try {
-                throw new InvaliEntryException("not valid year Birth");
-            } catch (InvaliEntryException e) {
+                throw new InvalidEntryException("not valid year Birth");
+            } catch (InvalidEntryException e) {
                 // e.printStackTrace();
-                logger.warn("Invalid Entry", e);
+                logger.warn("Invalid Entry");
             }
             i++;
 
             //logger.log(Level.toLevel("Sever"),"",new Exception("hii"));
-            System.err.println(i + " invalid entry");
+            System.err.println(i + " Invalid Entry");
             return null;
         } else {
 

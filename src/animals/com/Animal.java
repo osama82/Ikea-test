@@ -68,7 +68,7 @@ public class Animal {
         return Integer.valueOf(birthYear);
     }
 
-    @XmlElement(name = "age", required = true)
+    @XmlElement(name = "birth", required = true)
     String getBirthYear() {
         return birthYear;
     }
