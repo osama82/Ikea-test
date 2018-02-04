@@ -20,7 +20,7 @@ public class CSVReader {
     static int counter;
 
     public static final Logger logger = Logger.getLogger(CSVReader.class);
-    
+
 
     public List<Animal> convertCsvFile(String csvFile) {
 
@@ -67,10 +67,6 @@ public class CSVReader {
 
 
             Animal item = AnimalFactory.getAnimal(p[0]);
-            // if(item instanceof Swimmer)
-            //  ((Swimmer) item).swim();
-            //System.out.println(((Swimmer) item).swim());
-            //item.setType(p[0]);//<-- this is the first column in the csv file
             item.setName(p[1]);
             item.setBirthYear(p[2]);
 

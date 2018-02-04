@@ -5,24 +5,27 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 import java.util.ArrayList;
 
-@XmlRootElement(name="animals")
+@XmlRootElement(name = "animals")
 public class ListAnimals {
-    private List<Animal> animalslist=new ArrayList<>();
+    private List<Animal> animalslist = new ArrayList<>();
 
     public ListAnimals(List<Animal> animalslist) {
+
         this.animalslist = animalslist;
     }
-    public ListAnimals(){
+
+    public ListAnimals() {
 
     }
 
-    @XmlElement(name="animal",required = true)
+    @XmlElement(name = "animal", required = true)
     public List<Animal> getAnimalslist() {
 
         return animalslist;
     }
 
     public void setAnimalslist(List<Animal> animalslist) {
+
         this.animalslist = animalslist;
     }
 }

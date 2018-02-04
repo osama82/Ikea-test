@@ -59,6 +59,8 @@ public class ServiceTest {
         Assert.assertEquals(2, swimers.size());
         Assert.assertEquals("kilo", swimers.get(1).getName());
         Assert.assertThat(swimers.get(0), is(instanceOf(Swimmer.class)));
+        Assert.assertFalse(animals.get(2)instanceof Swimmer);//bengalCat is not swimmer
+
 
 
     }

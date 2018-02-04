@@ -17,29 +17,30 @@ import java.util.ArrayList;
 /**
  * @author osama
  * @Project Ikea test
- *class responsible of converting from CSV file TO XML file
+ * class responsible of converting from CSV file TO XML file
  */
 public class ToXMLConverter {
 
     protected DocumentBuilderFactory domFactory = null;
     protected DocumentBuilder domBuilder = null;
-    public static final Logger logger=Logger.getLogger(CSVReader.class);
+    public static final Logger logger = Logger.getLogger(CSVReader.class);
+
     /**
      * convert the CSV file in the path
+     *
      * @param csvFilePath to XML file in the path
      * @param xmlFilePath
-     *
      */
 
-    public  void convertToXml(String csvFilePath, String xmlFilePath)  {
+    public void convertToXml(String csvFilePath, String xmlFilePath) {
 
         ArrayList<String> animalsInfo = new ArrayList<>();
         File file = new File(csvFilePath);
 
-        if(!(file.exists())){
+        if (!(file.exists())) {
             logger.error("no file found");
-          //System.err.println("no file found");
-        return;
+            //System.err.println("no file found");
+            return;
         }
 
         BufferedReader readFile = null;
@@ -85,7 +86,7 @@ public class ToXMLConverter {
                         Element current = document.createElement(header);
                         current.appendChild(document.createTextNode(value));
                         childElement.appendChild(current);
-                       // System.out.println(value);
+                        // System.out.println(value);
                     }
                 }
                 line++;
@@ -105,7 +106,7 @@ public class ToXMLConverter {
             e.getStackTrace();
 
         }
-        logger.info("an XML File have been created in");
+        logger.info("an XML File have been created in" + xmlFilePath);
 
     }
 }

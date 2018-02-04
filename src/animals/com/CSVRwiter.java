@@ -15,9 +15,9 @@ import java.util.List;
 public class CSVRwiter {
 
     //private VirtualFlow.ArrayLinkedList<Animal> h;
-    private static String filName = "swimmers.csv";
-    private static List<Animal> list;
-    private static String delemiter = ",";// comma between every tow values in the same raw
+    private String filName = "swimmers.csv";
+    private List<Animal> list;
+    private String delemiter = ",";// comma between every tow values in the same raw
     private static final String HEADER = "type,name,yearBirth";
     private static String lineSeparator = "\n";// separate every tow lines of the csv file
     public static final Logger logger = Logger.getLogger(AnimalFactory.class);
