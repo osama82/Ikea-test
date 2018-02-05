@@ -62,7 +62,7 @@ public class Main {
             System.out.println(p.toString());
         }
         System.out.println("----------------------------");
-        System.out.println("the sum of the yearbirth " + service.sumYearsOfBirth(animalList));
+        System.out.println("the sum of the yearbirth :" + service.sumYearsOfBirth(animalList));
         logger.info("printing the sum of all yearbirths numbers of all the animals");
 
         System.out.println("----------------------------");
@@ -76,7 +76,7 @@ public class Main {
 
         System.out.println("----------------------------");
         System.out.println("sort the swimmers and print them to console");
-        List<Animal> sortedListOfSwimmers = service.sortByBirth(swimmers);
+        List<Animal> sortedListOfSwimmers = service.sortByBirth(swimmers);//from younger to older
         for (Animal p : sortedListOfSwimmers)
             System.out.println(p.toString());
 
@@ -86,6 +86,7 @@ public class Main {
         csvRwiter.writeCSCVFile(sortedListOfSwimmers, swimmersCSVFile);
 
 
+        // start server thread and client thread and client send info to server to be printed on console
         System.out.println("----------------------------");
         ServerClient serverClient = new ServerClient();
         serverClient.startServer();

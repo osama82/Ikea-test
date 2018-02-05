@@ -106,7 +106,7 @@ public class ToXMLConverter {
             e.getStackTrace();
 
         }
-        logger.info("an XML File have been created in" + xmlFilePath);
+        logger.info("an XML File have been created in " + xmlFilePath);
 
     }
 }
