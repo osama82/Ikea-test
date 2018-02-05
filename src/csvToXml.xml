@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<animals>
+<animal>
+<type>golden retriever</type>
+<name>lucy</name>
+<age>2011</age>
+</animal>
+<animal>
+<type>dolphin</type>
+<name>winter</name>
+<age>2003</age>
+</animal>
+<animal>
+<type>duck</type>
+<name>donald</name>
+<age>2010</age>
+</animal>
+<animal>
+<type>bengal cat</type>
+<name>billy</name>
+<age>20I1</age>
+</animal>
+<animal>
+<type>chicken</type>
+<name>johnny</name>
+<age>2015</age>
+</animal>
+<animal>
+<type>arabian horse</type>
+<name>blueskin</name>
+<age>2009</age>
+</animal>
+<animal>
+<type>german shepherd</type>
+<name>apollo</name>
+<age>2O13</age>
+</animal>
+<animal>
+<type>great white shark</type>
+<name>jaws</name>
+<age>2005</age>
+</animal>
+<animal>
+<type>parakeet</type>
+<name>cleo</name>
+<age>2010</age>
+</animal>
+</animals>
+
